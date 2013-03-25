@@ -1,11 +1,3 @@
-# Cookbook Name:: flvm
-# Recipe:: default
-#
-# Copyright (C) 2013 YOUR_NAME
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 save_to = "/home/vagrant/ruby-2.0.0-p0.tar.gz"
 
 remote_file save_to do

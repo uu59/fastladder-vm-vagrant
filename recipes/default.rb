@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: flvm
-# Recipe:: default
-#
-# Copyright (C) 2013 YOUR_NAME
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 %w[zlib-devel openssl-devel readline-devel libxml2-devel libxslt-devel libcurl-devel sqlite-devel].each do |pkg|
   yum_package pkg do
     action :install
