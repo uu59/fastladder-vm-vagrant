@@ -55,3 +55,15 @@ export PATH="$HOME/.nodebrew/current/bin:$HOME/bin:$PATH"
 BASH
 end
 
+execute "install phantomjs via npm" do
+  user "vagrant"
+  cwd "/home/vagrant"
+  environment({"HOME" => "/home/vagrant"})
+  npm = "/home/vagrant/.nodebrew/current/bin/npm"
+
+  command "#{npm} install -g phantomjs"
+
+  not_if do
+    ::File.exists?("/home/vagrant/.nodebrew/current/bin/phantomjs")
+  end
+end
